@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* CrossBeg Light Theme - Rich Social Commerce Palette */
+    --background: 0 0% 100%; /* Pure White Background */
+    --foreground: 220 15% 8%; /* Deep Rich Text */
+
+    --card: 0 0% 98%; /* Subtle Off-White Cards */
+    --card-foreground: 220 15% 8%;
+
+    --popover: 0 0% 100%; /* Pure White Popovers */
+    --popover-foreground: 220 15% 8%;
+
+    --primary: 81 100% 65%; /* Electric Lime #B3FF5C - More vibrant */
+    --primary-foreground: 220 15% 8%;
+
+    --secondary: 220 15% 95%; /* Soft Blue-Gray */
+    --secondary-foreground: 220 15% 8%;
+
+    --muted: 220 15% 92%; /* Refined Gray */
+    --muted-foreground: 220 12% 44%; /* Enhanced readability */
+
+    --accent: 262 83% 58%; /* Electric Violet #9333EA - New accent */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 85% 58%; /* Vivid Red */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 15% 86%; /* Strong Defined Borders */
+    --input: 220 15% 89%; /* Clear Input Backgrounds */
+    --ring: 81 100% 65%;
+
+    --radius: 0.75rem;
+    
+    /* CrossBeg Enhanced Color System */
+    --success: 142 78% 35%; /* Forest Green */
+    --success-foreground: 0 0% 98%;
+    --warning: 35 95% 52%; /* Bright Orange */
+    --warning-foreground: 220 15% 8%;
+    --info: 200 95% 50%; /* Bright Blue */
+    --info-foreground: 0 0% 98%;
+    --commerce: 324 85% 58%; /* Hot Pink for commerce #E91E63 */
+    --commerce-foreground: 0 0% 98%;
+
+    /* Solid Colors - No Gradients */
+
+    /* Professional Shadows */
+    --shadow-subtle: 0 1px 3px hsl(220 15% 8% / 0.12),
+      0 1px 2px hsl(220 15% 8% / 0.08);
+    --shadow-card: 0 4px 12px hsl(220 15% 8% / 0.15),
+      0 2px 6px hsl(220 15% 8% / 0.08);
+    --shadow-glow: 0 12px 32px -4px hsl(81 100% 65% / 0.35),
+      0 4px 8px -2px hsl(81 100% 65% / 0.1);
+    --shadow-violet: 0 8px 24px -2px hsl(262 83% 58% / 0.25);
+    --shadow-commerce: 0 8px 24px -2px hsl(324 85% 58% / 0.25);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 13% 9%;
+    --sidebar-primary: 220 13% 9%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 13% 96%;
+    --sidebar-accent-foreground: 220 13% 9%;
+    --sidebar-border: 220 13% 88%;
+    --sidebar-ring: 81 100% 70%;
+  }
+
+  .dark {
+    /* CrossBeg Dark Theme - Rich Social Commerce Palette */
+    --background: 222 20% 11%; /* Deep Dark Blue-Gray #1A1B23 */
+    --foreground: 0 0% 96%; /* Bright White Text */
+
+    --card: 222 18% 14%; /* Dark Card Background */
+    --card-foreground: 0 0% 96%;
+
+    --popover: 222 18% 14%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 81 100% 65%; /* Electric Lime - consistent */
+    --primary-foreground: 222 20% 11%;
+
+    --secondary: 222 18% 18%; /* Subtle Dark Gray */
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 222 18% 18%;
+    --muted-foreground: 0 0% 72%; /* Better contrast */
+
+    --accent: 262 83% 65%; /* Electric Violet - brighter for dark */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 85% 60%; /* Bright Red */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 222 18% 22%; /* Visible borders */
+    --input: 222 18% 22%;
+    --ring: 81 100% 65%;
+    
+    /* CrossBeg Enhanced Dark Color System */
+    --success: 142 78% 40%; /* Brighter Green */
+    --success-foreground: 222 20% 11%;
+    --warning: 35 95% 58%; /* Bright Orange */
+    --warning-foreground: 222 20% 11%;
+    --info: 200 95% 55%; /* Bright Blue */
+    --info-foreground: 222 20% 11%;
+    --commerce: 324 85% 65%; /* Bright Hot Pink */
+    --commerce-foreground: 0 0% 98%;
+    
+    /* Solid Colors - No Gradients */
+
+    /* Enhanced Dark Shadows */
+    --shadow-subtle: 0 2px 8px hsl(0 0% 0% / 0.4), 0 1px 3px hsl(0 0% 0% / 0.2);
+    --shadow-card: 0 6px 20px hsl(0 0% 0% / 0.5), 0 2px 8px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 12px 32px -4px hsl(81 100% 65% / 0.5),
+      0 4px 8px -2px hsl(81 100% 65% / 0.2);
+    --shadow-violet: 0 8px 24px -2px hsl(262 83% 65% / 0.4);
+    --shadow-commerce: 0 8px 24px -2px hsl(324 85% 65% / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-space-grotesk;
+  }
+}
+
+@layer utilities {
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-subtle {
+    box-shadow: var(--shadow-subtle);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .gradient-primary {
+    background-color: hsl(var(--primary));
+  }
+  
+  .gradient-accent {
+    background-color: hsl(var(--accent));
+  }
+  
+  .text-success {
+    color: hsl(var(--success));
+  }
+  
+  .bg-success {
+    background-color: hsl(var(--success));
+  }
+  
+  .text-success-foreground {
+    color: hsl(var(--success-foreground));
+  }
+}
